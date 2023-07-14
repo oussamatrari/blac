@@ -1,0 +1,566 @@
+<html lang="ar"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="">
+    <title>BAC 2023</title>
+	
+	 <!--[if lt IE 10]>
+			<meta http-equiv="refresh" content="0;url=olds.php">	
+	<![endif]--> 
+	
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+	html,body {
+		font-family: 'Arial', sans-serif;	
+		//font-family: 'Cairo', sans-serif;
+		direction : RTL;
+	}
+	
+	.fonty{font-family: 'Cairo', sans-serif;}
+	
+svg .c {
+		
+		animation: animatesvg 5s linear infinite;
+}	
+	
+@keyframes animatesvg
+{
+  0% {    transform: translateY(0px);  }
+  10% {   transform: translateY(2px);  }
+  20% {   transform: translateY(4px);  }
+  30% {   transform: translatey(6px); }
+  40% {   transform: translatey(7px); }
+50% {   transform: translatey(8px); }
+  
+  60% {    transform: translateY(8px);  }
+  70% {   transform: translateY(7px);  }
+  80% {   transform: translateY(6px);  }
+  85% {   transform: translateY(5px);  }
+  90% {   transform: translatey(4px); }
+  95% {   transform: translatey(2px); }
+  100% {   transform: translatey(0px); }
+}
+	
+	.bgy {
+		background:linear-gradient(180deg,#000090,#009900);/*,url(i2020.png);*/
+		background-blend-mode:screen;
+	}
+	
+		.bgy2 {
+		background:linear-gradient(180deg,#003300,#009900);
+		background-blend-mode:screen;
+	}
+
+		.bgy3 {
+		background:linear-gradient(180deg,#004400,#004400);
+		background-blend-mode:screen;
+	}
+	
+#infos{
+		position:relative;
+		display:inline-block;
+		padding:5px 3px;
+		overflow:hidden;
+		transition:0.2s;
+}	
+
+	#infos:hover {
+		background:linear-gradient(180deg,#004400,#004400);
+		box-shadow: 0 0 10px #009900, 0 0 30px #009900, 0 0 50px #009900;
+		transition-delay: 1s;
+	}
+
+	#infos div {
+		position:absolute;
+		display:block;
+	}
+	
+	#infos div:nth-child(1) {
+		top: 0;
+		left: -100%;
+		width:100%;
+		height:3px;
+		background: linear-gradient(90deg,transparent,#ffffff);
+	}	
+
+	#infos:hover div:nth-child(1) {
+		left: 100%;
+		transition:1s;
+	}	
+
+	#infos div:nth-child(3) {
+		bottom: 0;
+		right: -100%;
+		width:100%;
+		height:3px;
+		background: linear-gradient(270deg,transparent,#009900);
+	}	
+
+	#infos:hover div:nth-child(3) {
+		right: 100%;
+		transition:1s;
+		transition-delay: 0.5s;
+	}	
+	
+	#infos div:nth-child(2) {
+		top: -100%;
+		right: 0;
+		width:3px;
+		height:100%;
+		background: linear-gradient(180deg,transparent,#009900);
+	}
+
+	#infos:hover div:nth-child(2) {
+		top: 100%;
+		transition:1s;
+		transition-delay: 0.25s;
+	}	
+		
+	#infos div:nth-child(4) {
+		bottom: -100%;
+		left: 0;
+		width:3px;
+		height:100%;
+		background: linear-gradient(360deg,transparent,#ffffff);
+	}	
+
+	#infos:hover div:nth-child(4) {
+		bottom: 100%;
+		transition:1s;
+		transition-delay: 0.75s;
+	}	
+		
+
+
+	
+	/*symfony style*/
+			.cont { 
+			position: relative; 
+			background: radial-gradient(ellipse at bottom, hsla(65, 20%, 45%, 1) 0%, hsl(65, 20%, 13%) 100%); 
+			// background-attachment: fixed; color: hsla(168, 20%, 95%, 1); 
+			}	
+	/*fin symfony style*/		
+	
+	.fx { 
+		pointer-events: none; 
+		position: absolute; 
+		bottom: -2px; 
+		left: 0; 
+		z-index: 1; 
+		 width:100%;
+		 height:6.5rem;
+	 }	
+
+	.container {
+	  max-width: 600px;
+	}
+	.mb-3 {
+	 margin-top: 1.5rem;
+	}
+	.mb-33 {
+	 margin-top: 1.1rem;
+	}
+		
+	.mb-f {
+	 margin-top: 1.0rem;
+	 margin-bottom: 1.0rem;
+	}
+
+	.modal {
+	  display: none; 
+	  position: fixed; 
+	  z-index: 50; 
+	  padding-top: 100px;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  height: 100%; 
+	  overflow: auto; 
+	  background-color: rgb(0,0,0); 
+	  background-color: rgba(0,0,0,0.4);
+	}
+	.modal-content {
+	  background-color: #fefefe;
+	  margin: auto;
+	  padding: 20px;
+	  border: 1px solid #888;
+	  width: 50rem;
+	}
+	#closeme {
+	  background-color: red;
+	  margin: auto;
+	  padding: 2px;
+	  border: 0px solid #888;
+	  width: 40%;
+	  text-align:center;
+	  font-size: 1.5rem;
+	 font-weight: bold;
+	}
+	
+	#mess,#tit{ font-size: 1.6rem;}	
+	#glyf,#txt { font-size: 1.4rem;}
+	#rtxt {padding-right:10px;}
+	#rimg {padding-left:20px;}
+	
+	#inimg {width:50%;height:auto;float:left;
+	}
+	
+	
+	
+				@media (max-width: 900px) {
+
+				#rtxt {padding:auto;}
+			#rimg {padding:auto;margin:auto;}
+			#inimg {width:60%;height:auto;float:left;
+	}
+	
+	}
+
+	
+	
+			@media (max-width: 900px) {
+
+				#rtxt {padding:auto;}
+			#rimg {padding:auto;margin:auto;}
+			#inimg {width:70%;height:auto;float:left;
+	}
+	
+	}
+
+	
+		@media (max-width: 800px) {
+
+				#rtxt {padding:auto;}
+			#rimg {padding:auto;margin:auto;}
+			#inimg {width:80%;height:auto;float:left;
+	}
+	
+	}
+
+
+	@media (max-width: 700px) {
+
+		.modal-content {
+		  background-color: #fefefe;
+		  margin: auto;
+		  margin-top:-10px;
+		  padding: 20px;
+		  border: 1px solid #888;
+		  width: 96%;
+		} 
+		#closeme {
+		  background-color: red;
+		  margin: auto;
+		  padding: 2px;
+		  border: 0px solid #888;
+		  width: 94%;
+		  text-align:center;
+		  font-size: 1.3rem;
+		  font-weight: bold;
+		}	
+			#rtxt {padding:auto;}
+			#rimg {padding:auto;margin:auto;}
+			#inimg {width:90%;height:auto;float:left;
+	}
+	
+	}
+
+	
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		 #closeme {
+			  background-color: red;
+			  margin: auto;
+			  padding: 2px;
+			  border: 0px solid #888;
+			  width: 94%;
+			  text-align:center;
+			  font-size: 14px;
+			  font-weight: bold;
+		}
+		#mess {margin: auto;}
+		#mess,#glyf,#txt { font-size: 15px;}  
+}
+#popup-image{
+
+position:fixed;
+top:2%;
+left:2%;
+width:100%;
+hright:100vh;
+z-index:1000;
+display:none;
+}
+
+#popup-image img{
+position:absolute;
+top:170;
+left:0;
+width:396px;
+height:493px;
+object-fit:cover;
+
+
+
+}
+
+	
+</style>	
+<script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function inht(ht,dv){var newdiv = document.createElement("span");newdiv.innerHTML = ht.responseText;var container = document.getElementById(dv);container.appendChild(newdiv);} 
+var b="/";
+var elem="";
+var attnt="?????????";
+var resul="???????????";
+var ures="res"+b;
+var uresp="respdf"+b;
+var resu="resc"+b;
+var gx="GET"; 
+function close() {modal.style.display = "none";resc();}
+
+function resc() {
+	if(window.XMLHttpRequest){xcapty=new XMLHttpRequest();} else {xcapty=new ActiveXObject("Microsoft.XMLHTTP");}
+	xcapty.onreadystatechange=function(){
+		if(xcapty.readyState == 4 && xcapty.status == 200)
+		{
+		document.getElementById("captchad").innerHTML=xcapty.responseText;
+		document.getElementById("captchay").value='';}
+	else{}}
+	xcapty.open(gx,resu,true);
+	xcapty.send();
+}
+		
+function getres(v) {
+	var u="";
+	if (window.XMLHttpRequest) {orecs=new XMLHttpRequest();} else {orecs=new ActiveXObject("Microsoft.XMLHTTP"); }
+	if (v==1){u=ures;} else if (v==2) {u=uresp;} 
+	var mat=document.getElementById("matricule").value;u=u+"?&mat="+mat;
+	var pass=document.getElementById("password").value;u=u+"&pwd="+pass ;
+	var cap=document.getElementById("captchay").value;u=u+"&cap="+cap;
+	var token=document.getElementById("tokeny").value;u=u+"&token="+token;
+	if (mat=="")  {
+					elem="matricule";
+					alerty("???? ??? ??? ???????",attnt);	
+				}
+	else if (pass=="")  {
+					elem="password";
+					alerty("???? ??? ????? ?????",attnt);
+				}
+	else if (cap=="")  {
+					elem="captchay";
+					alerty("???? ??? ???????",attnt);}
+	else
+		{
+			elem="captchay";
+			alerty("???? ????? ??????? ??? ??? ?????? ??? ?????? 16:00",attnt);
+			setTimeout(function () { location.reload(true); }, 5000);
+			}
+}
+function keyenter(s,v){	var t = window.event ? s.keyCode : s.which;if (t==13) { getres(v);}	} 
+
+
+</script>
+<noscript><meta http-equiv="refresh" content="0;url=nohtml.php"></noscript>
+
+<style type="text/css" data-asas-style="">body, div, a, p, span{ user-select: text !important; }p, h1, h2, h3, h4, h5, h6{ cursor: auto; user-select: text !important; }::selection{ background-color: #338FFF !important; color: #fff !important; }</style></head>
+
+<body onload="resc()">
+
+
+<div id="popup-image">
+
+<img src="image.png">
+
+</div>
+<div id="app">
+	<div id="myModal" class="modal" style="padding-top:50px;margin:0px;display:none">
+		 <div class="modal-content fonty" style="padding-bottom:4px;padding-top:8px;">
+			<div class="modal-header" align="center"><h2 class="modal-title" id="tit" style="padding-bottom:0px;margin-bottom:0px;font-weight: bold;">???????????</h2></div>
+			<div class="modal-body fonty" id="dmess" align="center"><p id="mess" style="margin-bottom:0px">..</p></div>
+			<div class="modal-footer" style="padding-top:4px;padding-bottom:0px;margin-bottom:0px;">
+			<button class="btn btn-primary btn-block" id="closeme" style="width:20%;">
+			<span id="glyf" class="glyphicon glyphicon-repeat"></span><span id="txt"> ??? </span>
+			</button>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var modal = document.getElementById("myModal");
+		var btn = document.getElementById("closeme");
+		alerty = function(msg,tit) {
+		  modal.style.display = "block";
+		  document.getElementById("mess").innerHTML=msg;
+		  document.getElementById("tit").innerHTML=tit;
+		  if (tit==resul)
+		  {
+			   document.getElementById("mess").style="";
+			   document.getElementById("dmess").align="right";
+			   document.getElementById("closeme").style.width="45%";
+			   document.getElementById("closeme").innerHTML="<span>????? ??????? ?????? </span>"+
+			   "<span class='glyphicon glyphicon-chevron-left ' style='padding-right:6px'></span>";
+			   document.getElementById("closeme").style.backgroundColor = "#00aa00";
+		  }
+		  else
+		  {
+			   document.getElementById("mess").style="";
+			   document.getElementById("dmess").align="center";
+			   document.getElementById("closeme").style.width="20%";
+			   document.getElementById("closeme").innerHTML="<span class='glyphicon glyphicon-repeat'></span>"+
+			   "<span> ??? </span>";
+			   document.getElementById("closeme").style.backgroundColor = "#cc0000";  		  
+		  }
+		}
+		btn.onclick = function() {  
+		document.getElementById("loaderd").style.display="none";
+		document.getElementById(elem).focus();
+		modal.style.display = "none";
+		}
+		window.onclick = function(event) {
+	     if (event.target == modal) { modal.style.display = "none"; }
+		}
+
+		
+
+
+
+	</script>
+	
+	<script>
+	
+
+	function message(){
+	
+	
+	setTimeout(document.querySelector('#popup-image').style.display = 'block',3000);
+	
+	}
+
+	</script>
+	<header class="text-center cont ">
+	<div class="bgy">
+	<div style="display:inline-block;margin-top: 10px;padding:auto;">
+					<div style="display:inline-block;">
+					   <img style="margin-top:4px;margin-left:20px;" src="data:image/gif;base64,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" width="80" height="50" alt="">
+					</div>
+					<div style="display:inline-block;float:left;">
+					<p class="lead fonty" style="font-size:1.4rem; text-align:right;margin-bottom:0px;">
+						<span>الجمهورية الجزائرية الديمقراطية الشعبية</span><br>
+						<span>وزارة التربية الوطنية</span><br>
+						<span>الديوان الوطني للامتحانات والمسابقات</span>
+					</p>
+					</div>
+
+	</div>
+
+	<h2 style=" margin-top:1.8rem"><span class="fonty"><strong>نتائج امتحان شهادة البكالوريـــــــا 2023<strong></strong></strong></span></h2><strong><strong>
+		<div class="container " style=" max-width: 830px;margin:auto">
+		<p class="lead fonty" style="font-size:1.6rem; text-align:center;margin-bottom:12px">
+				<strong>يتمنى السيد وزير التربية الوطنية النجاح لكل المترشحين</strong>
+		</p>
+		<p class="lead fonty" style="font-size:1.4rem; text-align:right;margin-bottom:8px;">
+			<strong>أحجز رقم التسجيل ورقمك السري وأجب عن السؤال ثم أنقر على زر<q>استظهار النتيجة</q></strong>
+			<br><strong>أين أجد رقم التسجيل والرقم السري ? </strong>مدونان على الإستدعاء الخاص بإجراء الامتحان
+		</p>				
+		<p class="lead fonty" style="font-size:1.5rem;text-align:right">
+			<strong>ملاحظة : كشوف النقاط</strong><br>في اليوم الأول من إعلان النتائج بإمكان جميع المترشحين الاطلاع على نتائج مختصرة وفي اليوم الموالي 
+			<br> <strong>للراسبين  : </strong> بإمكان المترشحين الراسبين سحب كشف النقاط من هذا الموقع.
+			<br> <strong>للناجحين : </strong>تسلم لهم عبر مؤسساتهم إن كانوا متمدرسين وعبر مديريات التربية إن كانوا أحرار.
+		</p>
+
+		</div>
+		<div style="height: 45px;width: 1%;margin-bottom:0px;"></div>
+		<svg class="fx" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 75">
+		<defs>
+		<clipPath id="a">
+		<rect class="a" width="1920" height="75"></rect>
+		</clipPath>
+		<style> 
+		a{fill:white}.b{clip-path:url(#a)}.c {fill: white}.d {fill: white}.d{opacity:0.5;isolation:isolate;} 
+		</style>
+		</defs>
+		<g class="b"><path class="c" d="M1963,327H-105V65A2647.49,2647.49,0,0,1,431,19c217.7,3.5,239.6,30.8,470,36,297.3,6.7,367.5-36.2,642-28a2511.41,2511.41,0,0,1,420,48"></path></g>
+		<g class="b"><path class="d" d="M-127,404H1963V44c-140.1-28-343.3-46.7-566,22-75.5,23.3-118.5,45.9-162,64-48.6,20.2-404.7,128-784,0C355.2,97.7,341.6,78.3,235,50,86.6,10.6-41.8,6.9-127,10"></path></g>
+		<g class="b"><path class="d" d="M1979,462-155,446V106C251.8,20.2,576.6,15.9,805,30c167.4,10.3,322.3,32.9,680,56,207,13.4,378,20.3,494,24"></path></g>
+		<g class="b"><path class="d" d="M1998,484H-243V100c445.8,26.8,794.2-4.1,1035-39,141-20.4,231.1-40.1,378-45,349.6-11.6,636.7,73.8,828,150"></path></g>
+		</svg>
+</strong></strong></div><strong><strong>
+	</strong></strong></header><strong><strong>
+			<div class="container fonty" style="max-width:600px;margin-bottom:0;padding-botttom:0;">
+	
+			<div class="row">
+				<div class="col-xs-12 " style="text-align:right;margin-top:0px">
+				<div class="mb-3" style="margin-top:0px;padding-top:2px">
+					<label for="matricule" class="bgy2" style="color:white;padding:2px 10px 2px 10px;border-radius:4px"><span class="glyphicon glyphicon-user" style="padding-left:8px;"></span>  رقم التسجيل</label>
+					<input type="number" class=" form-control input-lg" id="matricule" maxlength="8" placeholder=" رقم التسجيل" required="" onkeyup="keyenter(event,2)">
+				</div>		
+				<div class="mb-3">
+					<label for="password" class="bgy2" style="color:white;padding:2px 10px 2px 10px;border-radius:4px"><span class="glyphicon glyphicon-lock" style="padding-left:8px;"></span> الرقم السري</label>
+					<input type="password" class=" form-control input-lg" id="password" placeholder=" الرقم السري" required="" onkeyup="keyenter(event,2)">
+				</div>	
+				<div class="row" style="align:right;padding-left:0px">
+					<div class="col-xs-8">
+						<div class="mb-3">
+							<label for="captchay"><span class="glyphicon glyphicon-pencil" style="padding-left:8px;"></span> الجواب</label>
+							<input type="number" class="form-control input-lg" id="captchay" placeholder="" required="" onkeyup="keyenter(event,2)">
+						</div>
+					</div>	
+					<div class="col-xs-4">
+						<div class="mb-3">
+							<div id="captchad" dir="rtl" align="right"><label>سؤال  :</label>
+<br>
+<b>كم يساوي 10-9?</b>
+<input type="hidden" name="tokeny" id="tokeny" value="82ca56c9509afdefc5412b1dedae1c08">
+							</div>
+						</div>
+					</div>
+				</div>		
+				<hr class="mb-f">
+					<!-- onclick="getres(2)" -->
+				  <button id="infos" class="btn btn-success btn-lg btn-block bgy2" type="bouton" onclick="message()" ><div></div><div></div><div></div><div></div>
+				استظهار النتيجة 
+					<span class="glyphicon glyphicon-search"></span>
+					<span id="loaderd" style="display: none;">
+					<img src="data:image/gif;base64,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" width="32" height="32" alt="?????...">
+					</span>
+				</button>
+			</div>
+			</div>
+			
+	</div>
+	
+	</strong></strong></div><strong><strong>
+	
+	<!-----bas ------------>
+	 <hr class="mb-f" style="margin-top:4px;padding:0">
+
+    <footer class="text-center text-muted background-color:gray;">
+		<div>
+	<p class="bgy3 fonty" style="color:white;font-size:1.4rem;padding-top:2px;padding-bottom:2px;margin-bottom:4px;">
+	<span dir="rtl">مدير الديوان الوطني للامتحانات والمسابقات يتمنى النجاح والتوفيق للجميع
+	</span></p>
+	</div>
+		<p><span dir="ltr" style="font-size:1.6rem;"> 2023 الديوان الوطني للامتحانات والمسابقات</span></p>
+
+	</footer>
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+</strong></strong></body></html>
